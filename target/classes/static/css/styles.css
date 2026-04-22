@@ -1,0 +1,37 @@
+body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
+.btn-danger { background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); border: none; }
+.bg-dark { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important; }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .container { padding: 0 15px; }
+    .card { margin-bottom: 1rem; }
+    .navbar-brand { font-size: 1rem; }
+    .btn { padding: 0.5rem 1rem; font-size: 0.875rem; }
+    .fs-1 { font-size: 2rem !important; }
+    .p-4 { padding: 1.5rem !important; }
+    .py-5 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+}
+
+/* Touch-friendly buttons */
+.btn { min-height: 44px; }
+.card { border-radius: 12px; }
+
+/* Better mobile navigation */
+.navbar-toggler { border: none; padding: 0.5rem; }
+.navbar-collapse { max-height: 80vh; overflow-y: auto; }
+
+/* Mobile card optimization */
+@media (max-width: 576px) {
+    .col-md-4, .col-md-6 { width: 100%; }
+    .card-body { padding: 1rem; }
+    .card-header { padding: 1rem; }
+}
+
+/* Prevent horizontal scroll */
+body { overflow-x: hidden; }
+* { max-width: 100%; }
+
+/* Better tap targets on mobile */
+a { min-height: 44px; display: inline-flex; align-items: center; }
+.btn-link { min-height: auto; }

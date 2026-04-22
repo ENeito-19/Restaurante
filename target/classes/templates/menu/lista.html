@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Menú')}"></head>
+<body class="bg-light">
+    <nav th:replace="~{fragments/layout :: navbar}"></nav>
+    
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="bg-dark text-white p-4 rounded-4 shadow-sm">
+                    <h2 class="mb-1"><i class="bi bi-list me-2 text-danger"></i>Nuestro Menú</h2>
+                    <p class="mb-0 text-light">Descubre nuestras deliciosas opciones</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400&h=250&fit=crop" 
+                         alt="Desayunos" 
+                         class="card-img-top" 
+                         style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h4 class="card-title fw-bold">Desayunos</h4>
+                        <p class="text-muted">Desayuno Chapín, Tamales y más</p>
+                        <a th:href="@{/menu/DESAYUNO}" class="btn btn-danger w-100">Ver Desayunos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=250&fit=crop" 
+                         alt="Almuerzos" 
+                         class="card-img-top" 
+                         style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h4 class="card-title fw-bold">Almuerzos</h4>
+                        <p class="text-muted">Pepián, Kak'ik, Jocón y más</p>
+                        <a th:href="@{/menu/ALMUERZO}" class="btn btn-danger w-100">Ver Almuerzos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&h=250&fit=crop" 
+                         alt="Cenas" 
+                         class="card-img-top" 
+                         style="height: 200px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h4 class="card-title fw-bold">Cenas</h4>
+                        <p class="text-muted">Tamales, Fiambre y más</p>
+                        <a th:href="@{/menu/CENA}" class="btn btn-danger w-100">Ver Cenas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
+    <div th:replace="~{fragments/layout :: scripts}"></div>
+</body>
+</html>

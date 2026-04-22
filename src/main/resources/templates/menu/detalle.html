@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Productos')}"></head>
+<body class="bg-light">
+    <nav th:replace="~{fragments/layout :: navbar}"></nav>
+    
+    <div class="container py-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="bg-dark text-white p-4 rounded-4 shadow-sm">
+                    <h2 class="mb-1" th:text="${categoria != null ? categoria.nombre : 'Productos'}">Categoría</h2>
+                    <p class="mb-0 text-light" th:text="${categoria != null ? categoria.descripcion : ''}">Descripción</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div th:each="producto : ${productos}" class="col-md-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <img th:src="${producto.imagen != null ? producto.imagen : 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=250&fit=crop'}" 
+                         th:alt="${producto.nombre}" 
+                         class="card-img-top" 
+                         style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold" th:text="${producto.nombre}">Producto</h5>
+                        <p class="card-text text-muted" th:text="${producto.descripcion}">Descripción</p>
+                        <div class="mt-3">
+                            <span class="h4 text-danger">Q<span th:text="${producto.precio}">0.00</span></span>
+                        </div>
+                        <button class="btn btn-outline-danger mt-3 w-100">
+                            <i class="bi bi-cart-plus me-2"></i>Agregar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
+    <div th:replace="~{fragments/layout :: scripts}"></div>
+</body>
+</html>
